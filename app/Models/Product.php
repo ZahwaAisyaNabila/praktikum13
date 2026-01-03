@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    // Kolom yang boleh diisi via API (store & update)
+    protected $fillable = [
+        'name',
+        'price',
+        'stock',
+        'sku',
+    ];
 }
